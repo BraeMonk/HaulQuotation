@@ -8,249 +8,113 @@
   @import url('https://fonts.googleapis.com/css2?family=Oswald:wght@500;600;700&family=IBM+Plex+Mono:wght@400;500;600&display=swap');
 
   :root{
-    --steel:#2b2f33;
-    --steel-dark:#1c1f22;
-    --concrete:#e8e4dc;
-    --safety:#ff6b1a;
-    --safety-dim:#cc5614;
-    --ok:#7fae5a;
-    --line:#44494e;
-    --paper:#f4f1ea;
+    --steel:#2b2f33; --steel-dark:#1c1f22; --concrete:#e8e4dc;
+    --safety:#ff6b1a; --safety-dim:#cc5614; --ok:#7fae5a;
+    --line:#44494e; --paper:#f4f1ea;
   }
   *{box-sizing:border-box;}
   body{
-    margin:0;
-    background:var(--steel-dark);
-    background-image:
-      linear-gradient(180deg, var(--steel-dark) 0%, var(--steel) 100%);
-    color:var(--concrete);
-    font-family:'IBM Plex Mono', monospace;
-    min-height:100vh;
-    padding:24px 16px 60px;
+    margin:0; background:linear-gradient(180deg, var(--steel-dark) 0%, var(--steel) 100%);
+    color:var(--concrete); font-family:'IBM Plex Mono', monospace;
+    min-height:100vh; padding:24px 16px 60px;
   }
   .wrap{max-width:640px;margin:0 auto;}
-
   header{margin-bottom:28px;}
   .tag{
-    font-family:'IBM Plex Mono',monospace;
-    font-size:11px;
-    letter-spacing:.18em;
-    color:var(--safety);
-    text-transform:uppercase;
-    border-left:3px solid var(--safety);
-    padding-left:8px;
-    margin-bottom:10px;
+    font-size:11px; letter-spacing:.18em; color:var(--safety); text-transform:uppercase;
+    border-left:3px solid var(--safety); padding-left:8px; margin-bottom:10px;
   }
   h1{
-    font-family:'Oswald',sans-serif;
-    font-weight:700;
-    font-size:34px;
-    line-height:1.05;
-    margin:0 0 6px;
-    text-transform:uppercase;
-    letter-spacing:.01em;
+    font-family:'Oswald',sans-serif; font-weight:700; font-size:34px; line-height:1.05;
+    margin:0 0 6px; text-transform:uppercase;
   }
   h1 span{color:var(--safety);}
   .sub{font-size:13px;color:#9aa1a7;max-width:480px;}
-
   .panel{
-    background:rgba(244,241,234,0.03);
-    border:1px solid var(--line);
-    border-radius:2px;
-    padding:20px;
-    margin-bottom:16px;
+    background:rgba(244,241,234,0.03); border:1px solid var(--line); border-radius:2px;
+    padding:20px; margin-bottom:16px;
   }
   .panel-title{
-    font-family:'Oswald',sans-serif;
-    font-weight:600;
-    font-size:14px;
-    text-transform:uppercase;
-    letter-spacing:.08em;
-    color:var(--concrete);
-    margin:0 0 14px;
-    display:flex;
-    align-items:center;
-    gap:8px;
+    font-family:'Oswald',sans-serif; font-weight:600; font-size:14px; text-transform:uppercase;
+    letter-spacing:.08em; margin:0 0 14px; display:flex; align-items:center; gap:8px;
   }
   .panel-title .num{
-    background:var(--safety);
-    color:var(--steel-dark);
-    font-weight:700;
-    font-size:12px;
-    width:20px;height:20px;
-    display:flex;align-items:center;justify-content:center;
-    border-radius:2px;
+    background:var(--safety); color:var(--steel-dark); font-weight:700; font-size:12px;
+    width:20px;height:20px; display:flex;align-items:center;justify-content:center; border-radius:2px;
   }
-
   label{
-    display:block;
-    font-size:12px;
-    color:#b6bcc1;
-    margin-bottom:6px;
-    text-transform:uppercase;
-    letter-spacing:.05em;
+    display:block; font-size:12px; color:#b6bcc1; margin-bottom:6px;
+    text-transform:uppercase; letter-spacing:.05em;
   }
   .field{margin-bottom:16px;}
   .field:last-child{margin-bottom:0;}
-
+  .grid2{display:grid;grid-template-columns:1fr 1fr;gap:12px;}
   select, input[type=number]{
-    width:100%;
-    background:var(--steel-dark);
-    border:1px solid var(--line);
-    color:var(--paper);
-    font-family:'IBM Plex Mono',monospace;
-    font-size:15px;
-    padding:10px 12px;
-    border-radius:2px;
+    width:100%; background:var(--steel-dark); border:1px solid var(--line); color:var(--paper);
+    font-family:'IBM Plex Mono',monospace; font-size:15px; padding:10px 12px; border-radius:2px;
     -webkit-appearance:none;
   }
   select:focus, input:focus{outline:2px solid var(--safety);outline-offset:-1px;}
-
-  .seg{
-    display:grid;
-    grid-template-columns:repeat(4,1fr);
-    gap:6px;
-  }
+  .seg{display:grid;grid-template-columns:repeat(4,1fr);gap:6px;}
   .seg button{
-    background:var(--steel-dark);
-    border:1px solid var(--line);
-    color:#9aa1a7;
-    font-family:'IBM Plex Mono',monospace;
-    font-size:13px;
-    padding:10px 4px;
-    border-radius:2px;
-    cursor:pointer;
+    background:var(--steel-dark); border:1px solid var(--line); color:#9aa1a7;
+    font-family:'IBM Plex Mono',monospace; font-size:13px; padding:10px 4px; border-radius:2px; cursor:pointer;
   }
-  .seg button.active{
-    background:var(--safety);
-    border-color:var(--safety);
-    color:var(--steel-dark);
-    font-weight:600;
-  }
-
+  .seg button.active{background:var(--safety);border-color:var(--safety);color:var(--steel-dark);font-weight:600;}
   .stepper{display:flex;align-items:center;gap:10px;}
   .stepper button{
-    width:38px;height:38px;
-    background:var(--steel-dark);
-    border:1px solid var(--line);
-    color:var(--safety);
-    font-size:18px;
-    border-radius:2px;
-    cursor:pointer;
-    line-height:1;
+    width:38px;height:38px; background:var(--steel-dark); border:1px solid var(--line);
+    color:var(--safety); font-size:18px; border-radius:2px; cursor:pointer; line-height:1;
   }
-  .stepper .val{
-    flex:1;
-    text-align:center;
-    font-size:18px;
-    font-weight:600;
-    color:var(--paper);
-  }
-
+  .stepper .val{flex:1;text-align:center;font-size:18px;font-weight:600;color:var(--paper);}
   .check-row{
-    display:flex;
-    justify-content:space-between;
-    align-items:center;
-    padding:10px 0;
+    display:flex; justify-content:space-between; align-items:center; padding:10px 0;
     border-bottom:1px solid var(--line);
   }
   .check-row:last-child{border-bottom:none;}
   .check-row .label-text{font-size:14px;color:var(--paper);text-transform:none;letter-spacing:0;}
   .check-row .hint{font-size:11px;color:#7d848a;display:block;margin-top:2px;}
-
   .toggle{
-    width:44px;height:24px;
-    background:var(--steel-dark);
-    border:1px solid var(--line);
-    border-radius:12px;
-    position:relative;
-    cursor:pointer;
-    flex-shrink:0;
+    width:44px;height:24px; background:var(--steel-dark); border:1px solid var(--line);
+    border-radius:12px; position:relative; cursor:pointer; flex-shrink:0;
   }
-  .toggle .dot{
-    width:18px;height:18px;
-    background:#7d848a;
-    border-radius:50%;
-    position:absolute;
-    top:2px;left:2px;
-    transition:.15s;
-  }
+  .toggle .dot{width:18px;height:18px;background:#7d848a;border-radius:50%;position:absolute;top:2px;left:2px;transition:.15s;}
   .toggle.on{background:rgba(255,107,26,0.25);border-color:var(--safety);}
   .toggle.on .dot{background:var(--safety);left:23px;}
-
-  /* receipt */
+  .slider-row{display:flex;align-items:center;gap:12px;}
+  input[type=range]{flex:1;accent-color:var(--safety);}
+  .slider-val{
+    font-family:'Oswald',sans-serif;font-weight:700;font-size:16px;color:var(--safety);min-width:50px;text-align:right;
+  }
   .receipt{
-    background:var(--paper);
-    color:var(--steel-dark);
-    border-radius:2px;
-    padding:22px 20px;
-    position:relative;
-    overflow:hidden;
+    background:var(--paper); color:var(--steel-dark); border-radius:2px; padding:22px 20px;
+    position:relative; overflow:hidden;
   }
   .receipt::before{
-    content:"";
-    position:absolute;top:0;left:0;right:0;height:6px;
+    content:""; position:absolute;top:0;left:0;right:0;height:6px;
     background:repeating-linear-gradient(45deg,var(--safety) 0 10px,var(--steel-dark) 10px 20px);
   }
   .receipt-title{
-    font-family:'Oswald',sans-serif;
-    font-weight:700;
-    font-size:13px;
-    text-transform:uppercase;
-    letter-spacing:.1em;
-    margin:10px 0 16px;
-    display:flex;
-    justify-content:space-between;
-    border-bottom:1px dashed #b8b3a4;
-    padding-bottom:10px;
+    font-family:'Oswald',sans-serif; font-weight:700; font-size:13px; text-transform:uppercase;
+    letter-spacing:.1em; margin:10px 0 16px; display:flex; justify-content:space-between;
+    border-bottom:1px dashed #b8b3a4; padding-bottom:10px;
   }
-  .line-item{
-    display:flex;
-    justify-content:space-between;
-    font-size:13px;
-    padding:5px 0;
-    color:#3a3530;
-  }
-  .line-item .desc{color:#3a3530;}
+  .line-item{display:flex;justify-content:space-between;font-size:13px;padding:5px 0;color:#3a3530;}
   .line-item .amt{font-weight:600;}
   .line-item.credit .amt{color:#3a7d2a;}
   .line-item.sub{padding-left:14px;color:#6b655a;font-size:12px;}
   .total-row{
-    display:flex;
-    justify-content:space-between;
-    align-items:baseline;
-    margin-top:14px;
-    padding-top:14px;
-    border-top:2px solid var(--steel-dark);
+    display:flex; justify-content:space-between; align-items:baseline; margin-top:14px;
+    padding-top:14px; border-top:2px solid var(--steel-dark);
   }
-  .total-row .t-label{
-    font-family:'Oswald',sans-serif;
-    font-weight:600;
-    font-size:14px;
-    text-transform:uppercase;
-    letter-spacing:.06em;
+  .total-row .t-label{font-family:'Oswald',sans-serif;font-weight:600;font-size:14px;text-transform:uppercase;letter-spacing:.06em;}
+  .total-row .t-amt{font-family:'Oswald',sans-serif;font-weight:700;font-size:32px;color:var(--safety-dim);}
+  .compare{
+    margin-top:16px;padding-top:12px;border-top:1px dashed #b8b3a4;font-size:12px;color:#6b655a;
   }
-  .total-row .t-amt{
-    font-family:'Oswald',sans-serif;
-    font-weight:700;
-    font-size:32px;
-    color:var(--safety-dim);
-  }
-  .range-note{font-size:11px;color:#7d847a;margin-top:4px;text-align:right;}
-
-  .note{
-    font-size:11px;
-    color:#8d9298;
-    line-height:1.5;
-    margin-top:10px;
-  }
-  .footer-note{
-    font-size:11px;
-    color:#6f757b;
-    text-align:center;
-    margin-top:24px;
-    line-height:1.6;
-  }
+  .compare b{color:#3a3530;}
+  .note{font-size:11px;color:#8d9298;line-height:1.5;margin-top:10px;}
+  .footer-note{font-size:11px;color:#6f757b;text-align:center;margin-top:24px;line-height:1.6;}
 </style>
 </head>
 <body>
@@ -259,93 +123,111 @@
   <header>
     <div class="tag">Barrie &amp; Area · Field Quote Tool</div>
     <h1>LOAD<span>&amp;</span>HAUL<br>QUOTE CALC</h1>
-    <div class="sub">Stand in the driveway, punch in the load, give them a number on the spot.</div>
+    <div class="sub">Built from real labor time, real truck cost, and real disposal fees — not guesses.</div>
   </header>
 
   <div class="panel">
-    <div class="panel-title"><span class="num">1</span>Load Size</div>
+    <div class="panel-title"><span class="num">1</span>Your Cost Inputs</div>
+    <div class="grid2">
+      <div class="field">
+        <label>Your hourly rate ($)</label>
+        <input type="number" id="hourlyRate" value="25" min="0" step="1">
+      </div>
+      <div class="field">
+        <label>Truck cost / day ($)</label>
+        <input type="number" id="truckDay" value="100" min="0" step="5">
+      </div>
+    </div>
     <div class="field">
-      <label>Fraction of truck bed</label>
-      <div class="seg" id="loadSeg">
-        <button data-val="70" data-label="¼ load">¼ load</button>
-        <button data-val="130" data-label="½ load" class="active">½ load</button>
-        <button data-val="190" data-label="¾ load">¾ load</button>
-        <button data-val="250" data-label="Full load">Full load</button>
+      <label>Jobs you'll run per truck-day</label>
+      <div class="slider-row">
+        <input type="range" id="jobsPerDay" min="1" max="6" value="3" step="1">
+        <span class="slider-val" id="jobsPerDayVal">3</span>
+      </div>
+      <div class="note">Truck cost gets split across this many jobs. Fewer jobs/day = more truck cost loaded onto this one.</div>
+    </div>
+    <div class="field">
+      <label>Target margin on top of cost</label>
+      <div class="slider-row">
+        <input type="range" id="margin" min="0" max="100" value="40" step="5">
+        <span class="slider-val" id="marginVal">40%</span>
       </div>
     </div>
   </div>
 
   <div class="panel">
-    <div class="panel-title"><span class="num">2</span>Labor &amp; Access</div>
-    <div class="check-row">
-      <div>
-        <span class="label-text">Stairs (per flight)</span>
-        <span class="hint">No elevator, no ground-level access</span>
+    <div class="panel-title"><span class="num">2</span>Load Size</div>
+    <div class="field">
+      <label>Fraction of truck bed (sets base labor time)</label>
+      <div class="seg" id="loadSeg">
+        <button data-idx="0">¼ load<br><small style="font-weight:400">~45min</small></button>
+        <button data-idx="1" class="active">½ load<br><small style="font-weight:400">~75min</small></button>
+        <button data-idx="2">¾ load<br><small style="font-weight:400">~105min</small></button>
+        <button data-idx="3">Full load<br><small style="font-weight:400">~150min</small></button>
       </div>
+    </div>
+  </div>
+
+  <div class="panel">
+    <div class="panel-title"><span class="num">3</span>Labor &amp; Access (adds time)</div>
+    <div class="check-row">
+      <div><span class="label-text">Stairs (per flight)</span><span class="hint">+10 min each</span></div>
       <div class="stepper" style="width:120px;">
-        <button onclick="adjust('stairs',-1)">–</button>
-        <span class="val" id="stairsVal">0</span>
-        <button onclick="adjust('stairs',1)">+</button>
+        <button onclick="adjust('stairs',-1)">–</button><span class="val" id="stairsVal">0</span><button onclick="adjust('stairs',1)">+</button>
       </div>
     </div>
     <div class="check-row">
-      <div>
-        <span class="label-text">Heavy single item</span>
-        <span class="hint">Piano, safe, hot tub, etc. — $40 each</span>
-      </div>
+      <div><span class="label-text">Heavy single item</span><span class="hint">Piano, safe, hot tub — +20 min each</span></div>
       <div class="stepper" style="width:120px;">
-        <button onclick="adjust('heavy',-1)">–</button>
-        <span class="val" id="heavyVal">0</span>
-        <button onclick="adjust('heavy',1)">+</button>
+        <button onclick="adjust('heavy',-1)">–</button><span class="val" id="heavyVal">0</span><button onclick="adjust('heavy',1)">+</button>
       </div>
     </div>
     <div class="check-row">
-      <div>
-        <span class="label-text">Needs disassembly</span>
-        <span class="hint">Furniture that won't fit whole — +$20</span>
-      </div>
+      <div><span class="label-text">Needs disassembly</span><span class="hint">+15 min</span></div>
       <div class="toggle" id="toggleDisassembly" onclick="toggleFlag('disassembly')"><div class="dot"></div></div>
     </div>
   </div>
 
   <div class="panel">
-    <div class="panel-title"><span class="num">3</span>Disposal Weight</div>
+    <div class="panel-title"><span class="num">4</span>Disposal Weight</div>
     <div class="field">
-      <label>Estimated load weight (City Landfill: $10 first 100kg, then $176/tonne — residential rate)</label>
+      <label>Estimated load weight — Barrie Landfill residential: $10 first 100kg, then $176/tonne</label>
       <div class="seg" id="weightSeg">
-        <button data-val="0" data-label="Light">Light<br><small style="font-weight:400">&lt;100kg</small></button>
-        <button data-val="1" data-label="Medium" class="active">Med<br><small style="font-weight:400">~300kg</small></button>
-        <button data-val="2" data-label="Heavy">Heavy<br><small style="font-weight:400">~600kg</small></button>
-        <button data-val="3" data-label="Very Heavy">V.Heavy<br><small style="font-weight:400">~1t</small></button>
+        <button data-idx="0">Light<br><small style="font-weight:400">&lt;100kg</small></button>
+        <button data-idx="1" class="active">Med<br><small style="font-weight:400">~300kg</small></button>
+        <button data-idx="2">Heavy<br><small style="font-weight:400">~600kg</small></button>
+        <button data-idx="3">V.Heavy<br><small style="font-weight:400">~1t</small></button>
       </div>
     </div>
-    <div class="note">Note: scrap metal, e-waste, and tires are free to divert at Barrie Landfill if separated. You're listed as a resident — non-resident/commercial rate is higher, confirm if that changes for you once incorporated.</div>
+    <div class="note">Scrap metal, e-waste, and tires divert free if separated. Resident rate used — commercial rate ($15 first 100kg) only barely higher once you incorporate.</div>
   </div>
 
   <div class="panel">
-    <div class="panel-title"><span class="num">4</span>Scrap Metal in Load</div>
-    <div class="field">
-      <label>Estimated resellable scrap weight (lb)</label>
-      <input type="number" id="scrapLb" value="0" min="0" step="5">
+    <div class="panel-title"><span class="num">5</span>Scrap Metal Credit</div>
+    <div class="grid2">
+      <div class="field">
+        <label>Scrap weight (lb)</label>
+        <input type="number" id="scrapLb" value="0" min="0" step="5">
+      </div>
+      <div class="field">
+        <label>Type (Triple M Barrie, John St.)</label>
+        <select id="scrapType">
+          <option value="0.15">Steel/white goods (~$0.15)</option>
+          <option value="0.85">Aluminum (~$0.85)</option>
+          <option value="3.40">Brass (~$3.40)</option>
+          <option value="6.30" selected>Copper, clean (~$6.30)</option>
+        </select>
+      </div>
     </div>
-    <div class="field">
-      <label>Scrap type (avg $/lb — Triple M Barrie, John St., confirm same-day)</label>
-      <select id="scrapType">
-        <option value="0.15">Mixed steel / white goods — call to confirm (~$0.15)</option>
-        <option value="0.85">Mixed aluminum (~$0.85)</option>
-        <option value="3.40">Mixed brass (~$3.40)</option>
-        <option value="6.30" selected>Copper, clean (~$6.30)</option>
-      </select>
-    </div>
-    <div class="note">This is a credit against your dump cost — it doesn't have to be advertised to the customer. Ferrous/white goods pricing fluctuates a lot — call (705) 728-2983 before counting on it.</div>
+    <div class="note">Call (705) 728-2983 to confirm same-day rates — ferrous pricing fluctuates and was showing $0 online recently.</div>
   </div>
 
   <div class="panel">
-    <div class="panel-title"><span class="num">5</span>Distance</div>
+    <div class="panel-title"><span class="num">6</span>Distance</div>
     <div class="field">
       <label>Kilometers beyond Barrie core (0 if in-town)</label>
       <input type="number" id="km" value="0" min="0" step="1">
-      <div class="note">+$0.75/km beyond ~15km radius</div>
+      <div class="note">+$0.75/km beyond ~15km radius — covers gas + your time</div>
     </div>
   </div>
 
@@ -356,106 +238,126 @@
       <span class="t-label">Customer Price</span>
       <span class="t-amt" id="totalAmt">$0</span>
     </div>
+    <div class="compare" id="compareNote"></div>
   </div>
 
   <div class="footer-note">
-    Formula: Volume + Labor + Disposal + Distance − Scrap Credit = Quote.<br>
+    Quote = ((Labor + Truck Share + Disposal) × (1 + Margin)) + Distance − Scrap Credit.<br>
     Round to the nearest $5 before saying it out loud.
   </div>
 
 </div>
 
 <script>
-  let state = { load:130, stairs:0, heavy:0, disassembly:false, weightTier:1, scrapLb:0, scrapRate:6.30, km:0 };
+  let state = {
+    hourlyRate:25, truckDay:100, jobsPerDay:3, margin:0.4,
+    loadIdx:1, stairs:0, heavy:0, disassembly:false,
+    weightIdx:1, scrapLb:0, scrapRate:6.30, km:0
+  };
 
+  const baseMinutes = [45,75,105,150];
   const weightTiers = [
     {kg:50,  label:"<100kg"},
     {kg:300, label:"~300kg"},
     {kg:600, label:"~600kg"},
     {kg:1000,label:"~1 tonne"}
   ];
+  // local competitor reference (Barrie Junk): $98 min, $2.25/cf first 100cf, $1.55/cf after
+  // rough cubic-foot mapping per load tier for comparison only
+  const competitorCf = [60, 150, 220, 300];
 
   function calcDisposal(kg){
-    // Residential: $10 first 100kg, then $176/tonne after
     if(kg<=100) return 10;
     const over = kg - 100;
     return 10 + (over/1000)*176;
   }
+  function competitorPrice(cf){
+    if(cf<=43) return 98; // roughly their minimum threshold
+    let price = Math.min(cf,100)*2.25;
+    if(cf>100) price += (cf-100)*1.55;
+    return Math.max(price,98);
+  }
 
-  function setupSeg(id, key, parser){
+  function setupSeg(id, key){
     const seg = document.getElementById(id);
-    seg.querySelectorAll('button').forEach((btn,idx)=>{
+    seg.querySelectorAll('button').forEach(btn=>{
       btn.addEventListener('click', ()=>{
         seg.querySelectorAll('button').forEach(b=>b.classList.remove('active'));
         btn.classList.add('active');
-        state[key] = parser ? parser(idx, btn) : Number(btn.dataset.val);
+        state[key] = Number(btn.dataset.idx);
         render();
       });
     });
   }
-  setupSeg('loadSeg','load');
-  setupSeg('weightSeg','weightTier', (idx)=>idx);
+  setupSeg('loadSeg','loadIdx');
+  setupSeg('weightSeg','weightIdx');
 
   function adjust(key, delta){
-    state[key] = Math.max(0, (state[key]||0)+delta);
+    state[key] = Math.max(0,(state[key]||0)+delta);
     document.getElementById(key+'Val').textContent = state[key];
     render();
   }
-
   function toggleFlag(key){
     state[key] = !state[key];
-    const el = document.getElementById('toggle'+key.charAt(0).toUpperCase()+key.slice(1));
-    el.classList.toggle('on', state[key]);
+    document.getElementById('toggle'+key.charAt(0).toUpperCase()+key.slice(1)).classList.toggle('on', state[key]);
     render();
   }
 
-  document.getElementById('scrapLb').addEventListener('input', e=>{
-    state.scrapLb = Number(e.target.value)||0; render();
+  ['hourlyRate','truckDay','scrapLb','km'].forEach(id=>{
+    document.getElementById(id).addEventListener('input', e=>{
+      state[id] = Number(e.target.value)||0; render();
+    });
   });
-  document.getElementById('scrapType').addEventListener('change', e=>{
-    state.scrapRate = Number(e.target.value); render();
+  document.getElementById('scrapType').addEventListener('change', e=>{ state.scrapRate = Number(e.target.value); render(); });
+  document.getElementById('jobsPerDay').addEventListener('input', e=>{
+    state.jobsPerDay = Number(e.target.value);
+    document.getElementById('jobsPerDayVal').textContent = state.jobsPerDay;
+    render();
   });
-  document.getElementById('km').addEventListener('input', e=>{
-    state.km = Number(e.target.value)||0; render();
+  document.getElementById('margin').addEventListener('input', e=>{
+    state.margin = Number(e.target.value)/100;
+    document.getElementById('marginVal').textContent = e.target.value+'%';
+    render();
   });
 
-  function money(n){
-    return (n<0?'-':'') + '$' + Math.abs(Math.round(n));
-  }
+  function money(n){ return (n<0?'-':'') + '$' + Math.abs(Math.round(n)); }
 
   function render(){
-    const volume = state.load;
-    const stairsCost = state.stairs * 15;
-    const heavyCost = state.heavy * 40;
-    const disassemblyCost = state.disassembly ? 20 : 0;
-    const labor = stairsCost + heavyCost + disassemblyCost;
-    const kg = weightTiers[state.weightTier].kg;
+    const extraMin = state.stairs*10 + state.heavy*20 + (state.disassembly?15:0);
+    const totalMin = baseMinutes[state.loadIdx] + extraMin;
+    const hours = totalMin/60;
+    const labor = hours * state.hourlyRate;
+    const truckShare = state.truckDay / state.jobsPerDay;
+    const kg = weightTiers[state.weightIdx].kg;
     const disposal = calcDisposal(kg);
     const distance = state.km * 0.75;
-    const scrapCredit = (state.scrapLb * state.scrapRate);
-    // scrap credit capped so it doesn't wipe out the whole job — cap at 40% of volume charge
-    const cappedCredit = Math.min(scrapCredit, volume*0.4);
+    const scrapCredit = state.scrapLb * state.scrapRate;
+    const coreCost = labor + truckShare + disposal;
+    const priced = coreCost * (1 + state.margin);
+    const cappedCredit = Math.min(scrapCredit, priced*0.4);
+    const total = priced + distance - cappedCredit;
 
-    const total = volume + labor + disposal + distance - cappedCredit;
-
-    const items = [];
-    items.push(['Volume charge', volume, false]);
-    if(stairsCost>0) items.push([`Stairs ×${state.stairs}`, stairsCost, false, true]);
-    if(heavyCost>0) items.push([`Heavy item ×${state.heavy}`, heavyCost, false, true]);
-    if(disassemblyCost>0) items.push(['Disassembly', disassemblyCost, false, true]);
-    items.push(['Disposal cost (' + weightTiers[state.weightTier].label + ')', disposal, false]);
-    if(distance>0) items.push([`Distance (${state.km}km)`, distance, false]);
-    if(cappedCredit>0) items.push(['Scrap credit', -cappedCredit, true]);
-
-    const html = items.map(([label,val,isCredit,isSub])=>{
-      return `<div class="line-item ${isCredit?'credit':''} ${isSub?'sub':''}">
-        <span class="desc">${label}</span>
-        <span class="amt">${isCredit?'−':''}${money(Math.abs(val))}</span>
-      </div>`;
-    }).join('');
+    const items = [
+      [`Labor (${Math.round(totalMin)} min @ $${state.hourlyRate}/hr)`, labor],
+      [`Truck share (1 of ${state.jobsPerDay} jobs today)`, truckShare],
+      [`Disposal (${weightTiers[state.weightIdx].label})`, disposal],
+    ];
+    let html = items.map(([l,v])=>`<div class="line-item"><span class="desc">${l}</span><span class="amt">${money(v)}</span></div>`).join('');
+    html += `<div class="line-item sub"><span class="desc">Subtotal cost</span><span class="amt">${money(coreCost)}</span></div>`;
+    html += `<div class="line-item"><span class="desc">+ Margin (${Math.round(state.margin*100)}%)</span><span class="amt">${money(priced-coreCost)}</span></div>`;
+    if(distance>0) html += `<div class="line-item"><span class="desc">Distance (${state.km}km)</span><span class="amt">${money(distance)}</span></div>`;
+    if(cappedCredit>0) html += `<div class="line-item credit"><span class="desc">Scrap credit</span><span class="amt">−${money(cappedCredit)}</span></div>`;
 
     document.getElementById('lineItems').innerHTML = html;
     document.getElementById('totalAmt').textContent = money(total);
+
+    const compCf = competitorCf[state.loadIdx];
+    const compPrice = competitorPrice(compCf);
+    const diff = compPrice - total;
+    const pct = Math.round((diff/compPrice)*100);
+    document.getElementById('compareNote').innerHTML =
+      `<b>vs. local competitor (Barrie Junk, similar load):</b> ~${money(compPrice)}<br>
+       Your price is ${diff>=0? 'about '+money(Math.abs(diff))+' lower ('+pct+'% cheaper)' : 'about '+money(Math.abs(diff))+' higher'} — ${diff>=0?'still profitable at your margin setting.':'consider lowering margin or this job may not be competitive.'}`;
   }
 
   document.getElementById('dateStamp').textContent = new Date().toLocaleDateString('en-CA');
